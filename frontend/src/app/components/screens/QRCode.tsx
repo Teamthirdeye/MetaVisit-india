@@ -1,8 +1,11 @@
 import { Download, Printer, Share2, Smartphone, Info } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
+import { QRCodeSVG } from 'qrcode.react';
 
 export function QRCodeScreen() {
+  const museumUrl = "https://museum.realmeta.ca/demo"; // Replace with actual dynamic URL
+
   return (
     <div className="p-4 lg:p-8 max-w-5xl mx-auto">
       <div className="mb-8">
@@ -19,57 +22,22 @@ export function QRCodeScreen() {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col items-center">
-              <div className="w-full max-w-sm aspect-square bg-white p-8 rounded-lg border-2 border-border mb-6">
-                <svg viewBox="0 0 256 256" className="w-full h-full">
-                  <rect width="256" height="256" fill="white"/>
-                  <g fill="#2D2D2D">
-                    <rect x="16" y="16" width="32" height="32"/>
-                    <rect x="16" y="56" width="32" height="8"/>
-                    <rect x="16" y="72" width="8" height="8"/>
-                    <rect x="32" y="72" width="16" height="8"/>
-                    <rect x="16" y="88" width="8" height="8"/>
-                    <rect x="32" y="88" width="8" height="8"/>
-                    <rect x="16" y="104" width="32" height="8"/>
-                    <rect x="16" y="120" width="32" height="32"/>
-
-                    <rect x="208" y="16" width="32" height="32"/>
-                    <rect x="208" y="56" width="32" height="8"/>
-                    <rect x="208" y="72" width="8" height="8"/>
-                    <rect x="224" y="72" width="16" height="8"/>
-                    <rect x="208" y="88" width="8" height="8"/>
-                    <rect x="224" y="88" width="8" height="8"/>
-                    <rect x="208" y="104" width="32" height="8"/>
-                    <rect x="208" y="120" width="32" height="32"/>
-
-                    <rect x="16" y="208" width="32" height="32"/>
-                    <rect x="16" y="168" width="32" height="8"/>
-                    <rect x="16" y="184" width="8" height="8"/>
-                    <rect x="32" y="184" width="16" height="8"/>
-                    <rect x="16" y="200" width="8" height="8"/>
-                    <rect x="32" y="200" width="8" height="8"/>
-
-                    <rect x="72" y="24" width="8" height="8"/>
-                    <rect x="88" y="24" width="8" height="8"/>
-                    <rect x="72" y="40" width="16" height="8"/>
-                    <rect x="104" y="32" width="8" height="8"/>
-                    <rect x="120" y="24" width="8" height="8"/>
-                    <rect x="136" y="32" width="8" height="8"/>
-                    <rect x="152" y="24" width="16" height="8"/>
-                    <rect x="176" y="32" width="8" height="8"/>
-                    <rect x="192" y="24" width="8" height="8"/>
-
-                    <rect x="80" y="80" width="96" height="96"/>
-                    <rect x="96" y="96" width="64" height="64"/>
-
-                    <rect x="72" y="216" width="8" height="8"/>
-                    <rect x="88" y="224" width="8" height="8"/>
-                    <rect x="104" y="216" width="16" height="8"/>
-                    <rect x="136" y="224" width="8" height="8"/>
-                    <rect x="152" y="216" width="8" height="8"/>
-                    <rect x="168" y="224" width="16" height="8"/>
-                    <rect x="200" y="216" width="8" height="8"/>
-                  </g>
-                </svg>
+              <div className="w-full max-w-sm aspect-square bg-white p-8 rounded-lg border-2 border-border mb-6 flex items-center justify-center">
+                <QRCodeSVG
+                  value={museumUrl}
+                  size={256}
+                  level="H"
+                  includeMargin={false}
+                  imageSettings={{
+                    src: "/logo.svg",
+                    x: undefined,
+                    y: undefined,
+                    height: 60,
+                    width: 60,
+                    excavate: true,
+                  }}
+                  className="w-full h-full"
+                />
               </div>
 
               <div className="flex flex-wrap gap-3 justify-center w-full">
