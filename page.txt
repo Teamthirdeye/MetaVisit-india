@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heritage Archive - Administrative Access</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#008094",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#8c4f10",
+                        "tertiary": "#006576",
+                        "primary-fixed": "#ffdcc2",
+                        "on-tertiary-container": "#f9fdff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#2e1500",
+                        "background": "#faf9f7",
+                        "surface-dim": "#dadad8",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#a76526",
+                        "on-background": "#1a1c1b",
+                        "on-primary-fixed-variant": "#6d3a00",
+                        "inverse-primary": "#ffb77b",
+                        "on-surface": "#1a1c1b",
+                        "surface-container-highest": "#e3e2e0",
+                        "secondary-fixed": "#ffdeaa",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#faf9f7",
+                        "on-primary-container": "#fffbff",
+                        "inverse-surface": "#2f3130",
+                        "on-secondary-container": "#704e00",
+                        "surface-container-high": "#e9e8e6",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#fbbc42",
+                        "outline-variant": "#d8c3b4",
+                        "surface": "#faf9f7",
+                        "tertiary-fixed": "#a8edff",
+                        "on-secondary-fixed": "#271900",
+                        "on-tertiary-fixed-variant": "#004e5b",
+                        "on-surface-variant": "#524439",
+                        "secondary-container": "#febe45",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#5f4100",
+                        "surface-container": "#efeeec",
+                        "surface-container-low": "#f4f3f1",
+                        "secondary": "#7d5700",
+                        "surface-variant": "#e3e2e0",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#894d0d",
+                        "outline": "#857467",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#ffb77b",
+                        "inverse-on-surface": "#f1f1ef",
+                        "tertiary-fixed-dim": "#74d4ea"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "md": "16px",
+                        "margin": "32px",
+                        "xs": "4px",
+                        "unit": "4px",
+                        "xl": "40px",
+                        "xxl": "64px"
+                    },
+                    "fontFamily": {
+                        "metadata": ["Space Grotesk"],
+                        "label": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "h3": ["Newsreader"],
+                        "h2": ["Newsreader"],
+                        "body-md": ["Space Grotesk"],
+                        "h1": ["Newsreader"]
+                    },
+                    "fontSize": {
+                        "metadata": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                        "label": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                        "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-glow {
+            background: radial-gradient(circle at 50% -20%, rgba(137, 77, 13, 0.05) 0%, rgba(250, 249, 247, 0) 70%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex flex-col items-center justify-center ambient-glow p-gutter">
+<!-- Top Navigation Suppression (Transactional Page Rule) -->
+<main class="w-full max-w-[440px] flex flex-col gap-xl">
+<!-- Brand Identity Section -->
+<header class="flex flex-col items-center text-center gap-md">
+<div class="w-16 h-16 flex items-center justify-center rounded-full bg-surface-container-low border border-outline-variant shadow-sm mb-sm">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="account_balance" style="font-variation-settings: 'FILL' 0;">account_balance</span>
+</div>
+<div class="space-y-xs">
+<h1 class="font-h2 text-h2 text-primary">Heritage Archive</h1>
+<p class="font-metadata text-metadata text-outline uppercase tracking-[0.2em]">Administrative Access</p>
+</div>
+</header>
+<!-- Login Container -->
+<section class="bg-surface-container-lowest p-xl rounded-xl border border-outline-variant shadow-[0_20px_50px_-20px_rgba(137,77,13,0.08)]">
+<form class="flex flex-col gap-lg">
+<!-- Email Field -->
+<div class="flex flex-col gap-xs">
+<label class="font-label text-label text-on-surface-variant uppercase" for="email">Department Email</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-b border-outline-variant py-md px-xs font-body-md outline-none focus:border-primary transition-all placeholder:text-surface-dim" id="email" name="email" placeholder="official@heritage.gov" type="email"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-xs text-outline group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-md" data-icon="mail">mail</span>
+</div>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-xs">
+<div class="flex justify-between items-end">
+<label class="font-label text-label text-on-surface-variant uppercase" for="password">Password</label>
+<a class="font-label text-[10px] text-primary hover:underline uppercase" href="#">Reset Credentials</a>
+</div>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border-b border-outline-variant py-md px-xs font-body-md outline-none focus:border-primary transition-all placeholder:text-surface-dim" id="password" name="password" placeholder="••••••••" type="password"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-xs text-outline group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-md" data-icon="lock">lock</span>
+</div>
+</div>
+</div>
+<div class="pt-md flex flex-col gap-md">
+<!-- Standard Login Action -->
+<button class="w-full py-md bg-primary text-on-primary font-label uppercase tracking-widest rounded-lg hover:bg-primary-container active:scale-[0.98] transition-all shadow-md" type="submit">
+                        Standard Login
+                    </button>
+<!-- Divider -->
+<div class="flex items-center gap-md py-xs">
+<div class="h-[1px] flex-1 bg-outline-variant/30"></div>
+<span class="font-label text-[10px] text-outline uppercase tracking-tighter">or authorize via</span>
+<div class="h-[1px] flex-1 bg-outline-variant/30"></div>
+</div>
+<!-- Govt SSO Action -->
+<button class="w-full py-md bg-transparent border border-outline-variant text-primary font-label uppercase tracking-widest rounded-lg hover:bg-surface-container-low active:scale-[0.98] transition-all flex items-center justify-center gap-sm" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+                        Login via Govt SSO
+                    </button>
+</div>
+</form>
+</section>
+<!-- Support/Security Footer -->
+<footer class="flex flex-col items-center gap-md">
+<div class="flex items-center gap-gutter">
+<div class="flex items-center gap-xs opacity-60">
+<span class="material-symbols-outlined text-[14px]" data-icon="shield">shield</span>
+<span class="font-metadata text-[12px] uppercase">Secure 256-bit AES</span>
+</div>
+<div class="flex items-center gap-xs opacity-60">
+<span class="material-symbols-outlined text-[14px]" data-icon="public">public</span>
+<span class="font-metadata text-[12px] uppercase">Gov Network Only</span>
+</div>
+</div>
+<div class="w-full pt-gutter border-t border-outline-variant/20 flex justify-between items-center px-xs">
+<p class="font-metadata text-[10px] text-outline uppercase">Archive ID: HA-9921-X</p>
+<div class="flex gap-md">
+<a class="font-metadata text-[10px] text-outline hover:text-primary uppercase transition-colors" href="#">Help Desk</a>
+<a class="font-metadata text-[10px] text-outline hover:text-primary uppercase transition-colors" href="#">Legal</a>
+</div>
+</div>
+</footer>
+</main>
+<!-- Background Decorative Elements -->
+<div class="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/5 blur-[120px]"></div>
+<div class="absolute bottom-[-5%] right-[-5%] w-[30%] h-[30%] rounded-full bg-secondary-container/5 blur-[100px]"></div>
+<!-- Subtle Grid Pattern -->
+<div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#894d0d 0.5px, transparent 0.5px); background-size: 24px 24px;"></div>
+</div>
+<!-- Hidden Map/Image Contexts -->
+<div class="hidden">
+<img data-alt="close-up of an ornate gold-embossed government seal on high-quality cream textured paper with soft focus depth" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI_ErXkdliwjZvlSpqLw5L4T4UEVggB4-DgUkpKXjDx_WkS_FqF_Mh8byObgpzsJkAePnk_ZB30KgNcTaJCwDJPrx9PYUiliRhbc9Ss56lV6NrkjWOiOY2Fgjc-s4aq3bKBPTnDEul54crTUh1HRLpxjSxRqoseYw9BWJ0ndDBbUgiNoec_oeSRJ4cfoksQQOAMDBsUedIPSKNCJM8QwViJ-0fx8ksv3AJZ3kz4gxXlh1EMeW8jmbID_y7teYXsc33W_hPI3b3ZM4"/>
+</div>
+</body></html>
